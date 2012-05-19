@@ -1,3 +1,3 @@
 module Main where
- num = [1..12]
- num_tup = [(x,y, x*y) | x <- num, y <- num]
+ getTable :: Integer -> [(Integer, Integer, Integer)]
+ getTable maxValue = [(x,y, x*y) | x <- [1..maxValue], y <- [1..maxValue]]
