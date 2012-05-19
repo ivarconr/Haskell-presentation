@@ -21,6 +21,7 @@ Part 1
 # Agenda - part1
 
 1. History
+1. What is Haskell?
 2. Basics
 3. Functions
 4. Recursion
@@ -42,7 +43,77 @@ Part 1
 
 ---
 
-# Basics -
+# What is Haskell?
+- Functional
+ - evaluating expressions
+ - avoids using mutable state
+ - first-class functions
+- Strong Static typing 
+- Implicitly typed
+- Lazy processing 
+- Lambda expressions
+
+---
+
+# Basics - Primitive types
+### Numbers
+    > 3 * 5
+    15
+    > 4 ^ 2 - 1
+    15
+    > (1 - 5)^(3 * 2 - 4)
+    16
+
+
+### Character Data
+    > "hello"
+    "hello"
+    > "hello" ++ " world"
+    "hello world"
+    > ['h','i']
+    "hi"
+
+## Booleans
+    > (4 + 5) == 9
+    True
+    > (5 + 5) /= 10    
+    False
+
+---
+
+# Functions
+- The centerpart of Haskell
+- Defined in two parts:
+ 1. (optinal) type specification
+ 2. Implementation
+- All functions takes only _one_ argument
+
+---
+
+# Control structures
+### If/then/else
+
+`if <condition> then <true-value> else <false-value>`
+
+- In Haskell _if_ is an expression (not a statement)
+- else is required
+
+
+    describeLetter :: Char -> String
+    describeLetter c =
+      if c >= 'a' && c <= 'z'
+        then "Lower case"
+        else if c >= 'A' && c <= 'Z'
+          then "Upper case"
+          else "Not an ASCII letter"
+
+### Guards
+    describeLetter :: Char -> String
+    describeLetter c
+     | c >= 'a' && c <= 'z' = "Lower case"
+     | c >= 'A' && c <= 'Z' = "Upper case"
+     | otherwise            = "Not an ASCII letter"
+
 
     </textarea>
     <div id="slideshow"></div>
