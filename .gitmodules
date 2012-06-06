@@ -1,0 +1,3 @@
+[submodule "part2"]
+	path = part2
+	url = https://github.com/chriswk/haskellday2.git
